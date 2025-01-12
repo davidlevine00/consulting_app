@@ -1,3 +1,4 @@
 Flask==2.0.1  # Your Flask version may vary
-gunicorn==20.1.0  # Add this line if it's not present
-# Other dependencies...
+gunicorn==20.1.0
+Flask-WTF==0.14.3  # Add any other dependencies you use
+Flask-SQLAlchemy==2.5.1  # If you use this library
