@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2>Chapter 1: Setting Sail - Understanding Cybersecurity Basics</h2>
+
+    <p>Setting out on a journey, whether across the vast ocean or through the digital landscape, demands careful planning and a clear understanding of the terrain ahead. Just as a sailor wouldn’t embark on a voyage without ensuring their boat is in good condition, we shouldn’t dive into the intricate waters of cyberspace without a solid grasp of cybersecurity basics.</p>
+
+    <p>Consider this scenario: A small fishing boat departs for a routine outing but fails to inspect for any damage to the hull. Hours later, it finds itself taking on water far from land. Now, think about an organization that overlooks a critical vulnerability in its network. While these situations may seem different, they both underscore the serious repercussions of inadequate preparation. In this chapter, we’ll delve into the important similarities between maritime and cybersecurity readiness, highlighting the essential steps for a safe and secure journey.</p>
+
+    {% if score is not none %}
+        <p>Your score: {{ score }}</p>
+    {% else %}
+        <form method="post">
+            <h3>Maritime Preparation: Preparing the Vessel</h3>
+            <label for="question1">What is the first step in preparing your boat for a journey?</label><br>
+            <input type="radio" name="question1" value="A"> Checking the weather forecast<br>
+            <input type="radio" name="question1" value="B"> Stocking up on supplies<br>
+            <input type="radio" name="question1" value="C"> Ensuring the hull is in good condition<br>
+            <input type="radio" name="question1" value="D"> All of the above<br><br>
+
+            <label for="question2">Before setting sail, why is it important to check your boat's communication equipment?</label><br>
+            <input type="radio" name="question2" value="A"> To ensure you can call for help in an emergency<br>
+            <input type="radio" name="question2" value="B"> To listen to music<br>
+            <input type="radio" name="question2" value="C"> To chat with other sailors for fun<br>
+            <input type="radio" name="question2" value="D"> To check the time<br><br>
+
+            <label for="question3">What does it mean to "batten down the hatches" before a storm?</label><br>
+            <input type="radio" name="question3" value="A"> Close all the boat's openings and secure everything<br>
+            <input type="radio" name="question3" value="B"> Start the engine<br>
+            <input type="radio" name="question3" value="C"> Raise the sails<br>
+            <input type="radio" name="question3" value="D"> Drop anchor<br><br>
+
+            <h3>Cybersecurity Preparation: Preparing the Digital Vessel</h3>
+            <label for="question4">What is the first step in securing your computer against cyber threats?</label><br>
+            <input type="radio" name="question4" value="A"> Installing antivirus software<br>
+            <input type="radio" name="question4" value="B"> Backing up important files<br>
+            <input type="radio" name="question4" value="C"> Setting up a firewall<br>
+            <input type="radio" name="question4" value="D"> All of the above<br><br>
+
+            <label for="question5">Why is it important to update your software regularly?</label><br>
+            <input type="radio" name="question5" value="A"> To get new features<br>
+            <input type="radio" name="question5" value="B"> To keep your system secure<br>
+            <input type="radio" name="question5" value="C"> To speed up your computer<br>
+            <input type="radio" name="question5" value="D"> To make it look nice<br><br>
+
+            <label for="question6">What should you do if you receive an email from an unknown sender with an attachment?</label><br>
+            <input type="radio" name="question6" value="A"> Open the attachment immediately<br>
+            <input type="radio" name="question6" value="B"> Delete the email without opening it<br>
+            <input type="radio" name="question6" value="C"> Reply to the email and ask who it is<br>
+            <input type="radio" name="question6" value="D"> Forward it to your friends<br><br>
+
+            <h3>Comparing Maritime to Cybersecurity</h3>
+            <label for="question7">How is checking your boat's communication equipment before a journey similar to securing your computer's network connection?</label><br>
+            <input type="radio" name="question7" value="A"> Both ensure you can call for help if needed<br>
+            <input type="radio" name="question7" value="B"> Both allow you to listen to music<br>
+            <input type="radio" name="question7" value="C"> Both are for chatting with others<br>
+            <input type="radio" name="question7" value="D"> Both are just for fun<br><br>
+
+            <label for="question8">Why is "battening down the hatches" before a storm similar to setting up a firewall on your computer?</label><br>
+            <input type="radio" name="question8" value="A"> Both involve securing everything to prevent damage<br>
+            <input type="radio" name="question8" value="B"> Both are for aesthetic purposes<br>
+            <input type="radio" name="question8" value="C"> Both are to increase speed<br>
+            <input type="radio" name="question8" value="D"> Both are to prepare for a party<br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    {% endif %}
+{% endblock %}
